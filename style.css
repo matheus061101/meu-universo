@@ -1,0 +1,270 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box
+}
+
+:root{
+
+--text-color: #0b0a36;
+--bg-url: url(./assets/backgroundrafalightmode.jpg);
+--stroke-color: #6c406d8f;
+--surface-color: rgb(255, 255, 255);
+--socialhover-color: #6c406d49;
+--switch-bg-url: url(./assets/sun.svg);
+}
+
+.Escuro{
+
+    --text-color: white;
+    --bg-url: url(./assets/backgroundrafadarkmode.jpg);
+    --stroke-color: #ffcee1;
+    --surface-color: rgba(255, 255, 255, 0.108);
+    --socialhover-color: #6c406d5b   ;
+    --switch-bg-url: url(./assets/moon-stars.svg);
+
+}
+
+
+
+
+   html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background-image: var(--bg-url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+
+    color: var(--text-color);
+}
+
+
+#container {
+    width: 100%;
+    max-width: 588px;
+    min-width: 250px;
+ padding: 24px;
+   margin: auto;
+ background-image: none;
+
+
+}
+
+/*profile */    
+
+#profile {
+    text-align: center;
+   
+   
+}
+
+#profile img {
+    margin-top: 56px;
+    width: 112px;
+    border-radius: 50%;
+
+}
+
+#profile p{color: var(--text-color);
+    margin-top: 8px;
+}
+
+p{
+display: block;
+font-weight: bold;
+font-size: large;
+}   
+
+a{ 
+
+    color: var(--text-color); 
+
+}
+
+/*switch*/
+#switch{
+position: relative;
+width: 64px;
+margin: 4px auto;
+margin-bottom: 16px;
+
+}
+#switch button{
+height: 32px;
+width: 32px;
+background: white var(--switch-bg-url) no-repeat  center;
+border-radius: 50%;
+border: 0;
+top: 50%;
+transform: translateY(-50%);
+position: absolute;
+z-index: 1;
+left: 0;
+
+animation: slide-back 0.3s forwards;
+
+}
+
+.Escuro #switch button{
+    
+    animation: slide-in 0.3s forwards;
+}
+
+
+#switch span{
+    border-radius: 9999px;
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    
+}
+
+/* list links */
+
+ul{
+    padding: 16px 24px;
+    list-style: none; 
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   
+}
+   
+ul li a { 
+    
+  
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  height: 56px;
+
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+   border-radius: 500px;
+   border-right-width: 10px;
+   border-bottom-width: 10px;
+    text-decoration: none;
+font-weight: 500;
+
+}
+
+footer {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--text-color );
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+#cecilia-1 {
+    margin-left: 5px;
+}
+
+/* pseudo-selector */
+
+ul li a:hover {
+    
+    border: 1px solid var(--stroke-color) ;
+    border-right-width: 5px;
+   border-bottom-width: 5px;
+}
+
+
+
+/* social-links */
+#social-links{
+
+    color:var(--text-color);
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+    margin-bottom: 16px;
+    font-size: 26px;
+    
+
+}
+
+#social-links a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   padding: 10px;
+   transition: font-size .2s;
+  
+}
+
+#social-links a:hover{
+    background-color: var(--socialhover-color);
+
+    
+    border-radius: 50%;
+}
+
+
+
+p#unico-1 {
+    
+    margin-top: 24px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--text-color );
+    margin-top: 16px;
+    font-size: 10px;
+}
+
+#matheus-1{
+
+margin-left: 5px;
+
+}
+
+
+/* media queries*/
+
+@media (min-width: 700px) {
+:root {
+    --bg-url: url(./assets/backgroundrafalightmode.jpg);}
+
+.Escuro {
+    --bg-url: url(./assets/backgroundrafadarkmode.jpg);}
+}
+
+
+/* animation */
+
+@keyframes slide-in {
+from {
+    left: 50%;
+}
+to {
+    left: 0;
+}
+}
+
+@keyframes slide-back {
+    from {
+        left: 0;
+    }
+    to 
+    {
+       left: 50%;
+    }
+}
+
