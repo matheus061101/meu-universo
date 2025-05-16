@@ -165,11 +165,11 @@ footer {
     display: flex;
     color: var(--text-color );
     margin-top: 16px;
-    font-size: 14px;
+    
 }
 
-#cecilia-1 {
-    margin-left: 5px;
+#footer1 {
+    font-size: 14px;
 }
 
 /* pseudo-selector */
